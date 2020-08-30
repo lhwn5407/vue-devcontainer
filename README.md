@@ -1,4 +1,4 @@
-# nodejs + webpack HMR(Hot moduel replace) + vue + mariadb
+# nodejs + vue + webpack HMR(Hot moduel replace) + mariadb
 
 - 관리자 : 이형욱
 
