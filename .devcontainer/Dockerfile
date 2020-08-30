@@ -1,5 +1,4 @@
 # Update the VARIANT arg in docker-compose.yml to pick a Node version: 10, 12, 14
-LABEL maintainer="Lee hyoung wook lhwn5407@naver.com"
 ARG VARIANT=12
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
