@@ -23,3 +23,7 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
 # [Optional] Uncomment if you want to install more global node packages
 # RUN sudo -u node npm install -g jshint
 
+# Add additional contig files
+ADD --chown=node:node dotfiles/.vimrc                            /home/node/
+ADD --chown=node:node dotfiles/.zshrc                            /home/node/
+ADD --chown=node:node dotfiles/.oh-my-zsh/custom/custom-ls.zsh   /home/node/.oh-my-zsh/custom/

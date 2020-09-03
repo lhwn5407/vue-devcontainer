@@ -7,7 +7,7 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/bash",
+		"terminal.integrated.shell.linux": "/bin/zsh",
 		"sqltools.connections": [{
 			"name": "Container database",
 			"driver": "MariaDB",
@@ -23,12 +23,12 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		// 웹 기본
+		"esbenp.prettier-vscode",
 		"dbaeumer.vscode-eslint",
 		"dbaeumer.jshint",
 		"ms-azuretools.vscode-docker",
 		"davidanson.vscode-markdownlint",
 		"eg2.vscode-npm-script",
-		"hookyqr.beautify",
 		"christian-kohler.npm-intellisense",
 		// db 관련
 		"dbaeumer.vscode-eslint",
@@ -42,7 +42,7 @@
 	// "forwardPorts": [3000, 3306],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y vim bash-completion && sudo bash -c 'npm completion >> /etc/bash_completion.d/npm-completion2'",
 
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node"
