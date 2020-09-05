@@ -1,8 +1,8 @@
-version: '3'
+version: "3"
 
 services:
   app:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
       args:
@@ -14,14 +14,19 @@ services:
 
     volumes:
       - ..:/workspace:cached
-      
+    
+    environment: 
+      TZ: Asia/Seoul
+      LC_ALL: en_US.UTF-8
+
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
+
 
     # Uncomment the next line to use a non-root user for all processes.
     # user: node
 
-    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
+    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
   db:
@@ -34,9 +39,12 @@ services:
       MYSQL_DATABASE: mariadb
       MYSQL_USER: mariadb
       MYSQL_PASSWORD: mariadb
+      TZ: Asia/Seoul
+      LC_ALL: en_US.UTF-8
 
     # Runs MariaDB on the same network as the app container, allows "forwardPorts" in devcontainer.json function.
     network_mode: service:app
+
 
     # Add "forwardPorts": ["3306"] to **devcontainer.json** to forward MongoDB locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)

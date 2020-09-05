@@ -1,6 +1,6 @@
 {
 	// 기본 포매터 지정
-	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	// "editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	// 기본 터미널 zsh
 	"terminal.integrated.shell.linux": "/bin/zsh",
 	// db 연결 확장 설정
@@ -31,5 +31,23 @@
 	"eslint.run": "onType",
 	// eslint 가 모든 javascript 파일을 검증하도록 기본 검사기 비활성화
 	// 참고 : https://stackoverflow.com/questions/51069070/removing-ts-errors-from-js-files-in-vs-code
-	"javascript.validate.enable": false
+	"javascript.validate.enable": false,
+	"eslint.probe": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"vue",
+		"markdown",
+	],
+
+	//
+	// 언어별 설정
+	//
+	"[markdown]": {
+		"editor.wordWrap": "on",
+		"editor.quickSuggestions": false,
+		"editor.tabSize": 2
+	}
 }
