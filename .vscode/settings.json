@@ -1,0 +1,35 @@
+{
+	// 기본 포매터 지정
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	// 기본 터미널 zsh
+	"terminal.integrated.shell.linux": "/bin/zsh",
+	// db 연결 확장 설정
+	"sqltools.connections": [
+		{
+			"name": "Container database",
+			"driver": "MariaDB",
+			"previewLimit": 50,
+			"server": "localhost",
+			"port": 3306,
+			"database": "mariadb",
+			"username": "root",
+			"password": "mariadb"
+		}
+	],
+	// eslint 관련 설정
+	"eslint.debug": true,
+	"eslint.format.enable": true,
+	// 저장할때 마다 eslint로 포맷하기 위해서는 이 설정을 비활성화 해야함
+	// 참고 : https://github.com/microsoft/vscode-eslint/issues/833
+	"editor.formatOnSave": false,
+	// eslint 저장할때마다 포맷
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	// eslint 저장할때마다 린트, 기본값은 타이핑 할때마다 린트인데
+	// 너무 거슬리면 저장할때마다 하는거로 변경할 수 있음 : onSave
+	"eslint.run": "onType",
+	// eslint 가 모든 javascript 파일을 검증하도록 기본 검사기 비활성화
+	// 참고 : https://stackoverflow.com/questions/51069070/removing-ts-errors-from-js-files-in-vs-code
+	"javascript.validate.enable": false
+}
