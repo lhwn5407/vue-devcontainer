@@ -22,9 +22,12 @@ module.exports = {
         'quotes': ['error', 'single'],                                  // prettier singleQuote:true
         'object-curly-spacing': ['error', 'always'],                    // prettier bracketSpacing:true
         // 추가설정
+        'no-new': 'off',                                                // 변수에 저장하지 않는 new 허용
         'quote-props': ['error', 'consistent'],                         // 일관된 따옴표 붙이기만 허용
         'no-multi-spaces': ['error', { ignoreEOLComments: true }],      // one-line comment에 수직 줄맞춤 허용
         'array-element-newline': ['error', 'consistent'],               // 배열의 일관된 줄바꿈만 허용
+        // vue 설정
+        'vue/order-in-components': 'off',
     },
     globals: {
         Vue: 'readonly',

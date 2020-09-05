@@ -5,7 +5,7 @@
 ```bash
 npm install # 의존성 설치(package.json)
 npm start   # webpack-dev-server 실행
-            # localhost:8000 -> 포워딩 필요
+            # localhost:8000 -> 자동으로 포워딩 됨
 ```
 
 ## 포매터 사용

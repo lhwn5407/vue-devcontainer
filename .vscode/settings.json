@@ -26,11 +26,15 @@
         "typescript",
         "typescriptreact",
         "html",
-        "vue"
+        "vue",
+        "vue-html"
     ],
+    // eslint를 통해 vue를 검사하게 하기 위한 vetur 비활성화
+    "vetur.validation.template": false,
     "eslint.debug": true,
     "eslint.format.enable": true,
-    "eslint.run": "onType",
+    "eslint.run": "onSave",
+    // "eslint.run": "onType",
     // eslint 가 기본 검사기 대신 javascript 파일을 검사하도록 함. 기본 검사기 비활성화
     // 참고 : https://stackoverflow.com/questions/51069070/removing-ts-errors-from-js-files-in-vs-code
     "javascript.validate.enable": false,
@@ -52,6 +56,10 @@
         "editor.formatOnSave": false
     },
     "[vue]": {
+        "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+        "editor.formatOnSave": false
+    },
+    "[vue-html]": {
         "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
         "editor.formatOnSave": false
     },
