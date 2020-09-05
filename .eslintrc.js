@@ -17,7 +17,7 @@ module.exports = {
         // prettier 모방
         /* comma-dangle: ['error', ... airbnbn-base에 의해 설정됨] */   // prettier trailingComma:all
         'max-len': ['error', { 'code': 80, 'ignoreComments': true }],   // prettier printWidht:80
-        'indent': ['error', 4, { 'ignoreComments': false }],             // prettier tabWidth:4
+        'indent': ['error', 4, { 'ignoreComments': false }],            // prettier tabWidth:4
         'semi': ['error', 'always', { omitLastInOneLineBlock: true }],  // prettier semi:true
         'quotes': ['error', 'single'],                                  // prettier singleQuote:true
         'object-curly-spacing': ['error', 'always'],                    // prettier bracketSpacing:true

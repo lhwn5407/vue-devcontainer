@@ -1,53 +1,69 @@
 {
-	// 기본 포매터 지정
-	// "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-	// 기본 터미널 zsh
-	"terminal.integrated.shell.linux": "/bin/zsh",
-	// db 연결 확장 설정
-	"sqltools.connections": [
-		{
-			"name": "Container database",
-			"driver": "MariaDB",
-			"previewLimit": 50,
-			"server": "localhost",
-			"port": 3306,
-			"database": "mariadb",
-			"username": "root",
-			"password": "mariadb"
-		}
-	],
-	// eslint 관련 설정
-	"eslint.debug": true,
-	"eslint.format.enable": true,
-	// 저장할때 마다 eslint로 포맷하기 위해서는 이 설정을 비활성화 해야함
-	// 참고 : https://github.com/microsoft/vscode-eslint/issues/833
-	"editor.formatOnSave": false,
-	// eslint 저장할때마다 포맷
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	},
-	// eslint 저장할때마다 린트, 기본값은 타이핑 할때마다 린트인데
-	// 너무 거슬리면 저장할때마다 하는거로 변경할 수 있음 : onSave
-	"eslint.run": "onType",
-	// eslint 가 모든 javascript 파일을 검증하도록 기본 검사기 비활성화
-	// 참고 : https://stackoverflow.com/questions/51069070/removing-ts-errors-from-js-files-in-vs-code
-	"javascript.validate.enable": false,
-	"eslint.probe": [
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"html",
-		"vue",
-		"markdown",
-	],
+    // 기본 터미널 zsh
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    // db 연결 확장 설정
+    "sqltools.connections": [
+        {
+            "name": "Container database",
+            "driver": "MariaDB",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "database": "mariadb",
+            "username": "root",
+            "password": "mariadb"
+        }
+    ],
 
-	//
-	// 언어별 설정
-	//
-	"[markdown]": {
-		"editor.wordWrap": "on",
-		"editor.quickSuggestions": false,
-		"editor.tabSize": 2
-	}
+    //
+    // eslint 관련 설정
+    //
+
+    // eslint 가 검사할 언어 목록
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue"
+    ],
+    "eslint.debug": true,
+    "eslint.format.enable": true,
+    "eslint.run": "onType",
+    // eslint 가 기본 검사기 대신 javascript 파일을 검사하도록 함. 기본 검사기 비활성화
+    // 참고 : https://stackoverflow.com/questions/51069070/removing-ts-errors-from-js-files-in-vs-code
+    "javascript.validate.enable": false,
+
+    //
+    // 언어별 설정
+    //
+
+    // START: eslint로 포맷하는 언어들
+    "[javascript]": {
+        // 저장할때마다 eslint 로 포맷
+        "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+        // defaultFormatter를 이용하는 기본 저장시 포맷 옵션 비활성화.
+        // 참고 : https://github.com/microsoft/vscode-eslint/issues/833
+        "editor.formatOnSave": false
+    },
+    "[html]": {
+        "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+        "editor.formatOnSave": false
+    },
+    "[vue]": {
+        "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+        "editor.formatOnSave": false
+    },
+    // END: eslint로 포맷하는 언어들
+
+    // START: prettier로 포맷하는 언어들
+    // 기본 포매터를 prettier 로 지정. editor.formatOnSave 시 사용
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // 저장시 기본 포매터 실행 (prettier)
+    "editor.formatOnSave": true,
+    "[markdown]": {
+        "editor.tabSize": 2 // 탭 사이즈 수정
+    }
+    // END: prettier로 포맷하는 언어들
 }
