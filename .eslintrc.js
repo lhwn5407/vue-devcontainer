@@ -26,6 +26,7 @@ module.exports = {
         'quote-props': ['error', 'consistent'],                         // 일관된 따옴표 붙이기만 허용
         'no-multi-spaces': ['error', { ignoreEOLComments: true }],      // one-line comment에 수직 줄맞춤 허용
         'array-element-newline': ['error', 'consistent'],               // 배열의 일관된 줄바꿈만 허용
+        'no-use-before-define': 'off',                                  // 정의하기 전 변수 사용 허용
         // vue 설정
         'vue/order-in-components': 'off',
     },
