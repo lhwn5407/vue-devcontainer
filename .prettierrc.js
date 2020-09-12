@@ -15,10 +15,10 @@ module.exports = {
   bracketSpacing: true,
   // 단독 화살표 함수에서 항상 괄호 사용 : 'x => x' ==> '(x) => x'
   arrowParens: 'always',
-  //
+  // 오브젝트 속성의 따옴표 처리에 대해 일관되게 함
   quoteProps: 'consistent',
   //
-  // 특정 언어별 설정
+  // 특정 언어별 설정 가능
   // "overrides": [
   //     {
   //         "files": ["*.md", "*.yml"],
