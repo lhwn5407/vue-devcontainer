@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   app:
@@ -28,7 +28,7 @@ services:
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
     ports:
-      - '8000:8000'
+      - "8080:8080"
 
   db:
     image: mariadb:10.4
