@@ -13,6 +13,22 @@ node / db 각각의 서비스를 별도의 컨테이너로 제공함.
 
 단일 컨테이너 버전은 [vue-container-1container](https://github.com/lhwn5407/vue-devcontainer-1container) 참고
 
+## 시스템 요구사항
+
+리눅스 Docker 컨테이너 실행 가능 환경이어야 함.
+
+[컨테이너에서 개발하기] 의 요구사항을 수행하세요.
+
+윈도우에서 이 기능을 사용하려면 WSL2 설치가 필요합니다.
+
+WSL2 설치에 대한 자세한 내용은 [WSL2 설치하기] 문서를 참고하세요.
+
+컨테이너를 시작하는 자세한 내용은 [git 저장소에서 컨테이너 시작하기] 문서를 참고하세요.
+
+[컨테이너에서 개발하기]: https://code.visualstudio.com/docs/remote/containers#_getting-started
+[wsl2 설치하기]: https://docs.microsoft.com/ko-kr/windows/wsl/install-win10#update-to-wsl-2
+[git 저장소에서 컨테이너 시작하기]: https://code.visualstudio.com/docs/remote/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume
+
 ## vue cli 설치 정보
 
 ```text
