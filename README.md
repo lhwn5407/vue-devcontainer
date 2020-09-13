@@ -1,4 +1,17 @@
-# workspace
+# Vue를 독립된 컨테이너 환경에서 개발하기 위한 VS code환경을 제공합니다.
+
+## 컨테이너 정보
+
+- app : nodejs 14
+  - /workspace
+  - port 8080
+- db : mariadb 10.4
+  - /var/lib/mysql
+  - port 3306
+
+node / db 각각의 서비스를 별도의 컨테이너로 제공함.
+
+단일 컨테이너 버전은 [vue-container-1container](https://github.com/lhwn5407/vue-devcontainer-1container) 참고
 
 ## vue cli 설치 정보
 
